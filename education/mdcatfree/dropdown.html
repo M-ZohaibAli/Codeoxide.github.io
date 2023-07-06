@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Toggle Dropdown Button</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            background-color: #b4a7d3;
+            width: 100%;
+
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 200px;
+            padding: 10px;
+            background-color: #cfc9dd;
+            border: 1px solid #0f0e0e;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .dropdown.active .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown-icon {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dropdown">
+        <button class="dropdown-button" onclick="toggleDropdown(this)">
+            Read More <i class="fas fa-chevron-right dropdown-icon"></i>
+        </button>
+        <div class="dropdown-content">
+            <p>
+                This is a long paragraph that will be toggled when the button is clicked. It can contain any text or
+                content you want.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown(button) {
+            var dropdown = button.parentNode;
+            dropdown.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>

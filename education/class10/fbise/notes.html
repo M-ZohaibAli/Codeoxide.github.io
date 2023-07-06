@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Class Notes - 10th Grade Biology</title>
+    <style>
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .text-area {
+            width: 100%;
+            height: 200px;
+            resize: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Class Notes - 10th Grade Biology</h2>
+        <textarea id="notes" class="text-area" placeholder="Write your class notes here..."></textarea>
+        <br>
+        <button onclick="downloadNotes()" class="button">Download Notes</button>
+    </div>
+
+    <script>
+        function downloadNotes() {
+            const text = document.getElementById('notes').value;
+            const filename = '10th_grade_biology_notes.txt';
+
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+            element.setAttribute('download', filename);
+
+            element.style.display = 'none';
+            document.body.appendChild(element);
+
+            element.click();
+
+            document.body.removeChild(element);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+	<title>Contact us</title>
+	<!-- define some style elements-->
+	<style>
+		h1 {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 16px;
+			font-weight: bold;
+		}
+
+		label,
+		a {
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 12px;
+		}
+
+		.footer {
+			background-color: #0a0108;
+			color: #fff;
+			padding: 20px 0;
+		}
+
+		.footer ul {
+			list-style: none;
+			padding: 0;
+		}
+
+		.footer ul li {
+			display: inline-block;
+			margin-right: 15px;
+		}
+
+		.footer .center-row {
+			text-align: center;
+		}
+
+		.footer .right-corner {
+			text-align: right;
+		}
+	</style>
+	<nav class="navbar navbar-expand-lg bg-body-tertiary ">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="index.html">CodeOxide</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="aboutus.html">About Us </a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="form/contact-form.html">Contact Us </a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Other services
+						</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="quiz.html">OUR QUIZES</a></li>
+							<li><a class="dropdown-item" href="Https://codeoxidemart.vq.pe">SHOPPING CENTER</a></li>
+							<!--<li><hr class="dropdown-divider"></li>-->
+							<li><a class="dropdown-item" href="education.html">EDUCATION CENTER</a></li>
+							<li><a class="dropdown-item" href="mdcat.html">MDCAT ACADEMY</a></li>
+
+						</ul>
+					</li>
+					<!-- <li class="nav-item">
+	  <a class="nav-link disabled">Disabled</a>
+	  </li>-->
+				</ul>
+				<form class="d-flex" role="search">
+					<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success" type="submit">Search</button>
+				</form>
+			</div>
+		</div>
+	</nav>
+	<!-- a helper script for vaidating the form-->
+	<script language="JavaScript" src="php-email-contact-form/scripts/gen_validatorv31.js"
+		type="text/javascript"></script>
+</head>
+</head>
+
+<body>
+	<h1>Contact us</h1>
+	<form method="POST" name="contactform" action="contact-form-handler.php">
+		<p>
+		<div style="background-color: rgb(203, 188, 218);">
+			<div style="text-align: center" ;>
+				<label for='name'>Your Name:</label> <br>
+				<input type="text" name="name">
+				</p>
+				<p>
+					<label for='email'>Email Address:</label> <br>
+					<input type="text" name="email"> <br>
+				</p>
+				<p>
+					<label for='message'>Message:</label> <br>
+					<textarea name="message"></textarea>
+				</p>
+				<input type="submit" value="Submit"><br>
+	</form>
+	</div>
+	</div>
+
+	<script language="JavaScript">
+		// Code for validating the form
+		// Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+		// for details
+		var frmvalidator = new Validator("contactform");
+		frmvalidator.addValidation("name", "req", "Please provide your name");
+		frmvalidator.addValidation("email", "req", "Please provide your email");
+		frmvalidator.addValidation("email", "email", "Please enter a valid email address"); 
+	</script>
+	<!--
+Sample code from:
+http://www.html-form-guide.com/contact-form/php-email-contact-form.html
+-->
+	<!-- Your website content here -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-12">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="AboutUs.html">About Us</a></li>
+						<li><a href="contact-form.html">Contact Us</a></li>
+						<li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 col-sm-12 center-row">
+					<h4>Education</h4>
+					<ul>
+						<li><a href="education/class9.html">Class 9</a></li>
+						<li><a href="education/Class10.html">Class 10</a></li>
+						<li><a href="education/Cass11.html">Class 11</a></li>
+						<li><a href="education/Class12.html">Class 12</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4 col-sm-12 right-corner">
+					<ul>
+						<li><a href="education/buybooks.html">Buy Our Books</a></li>
+						<li><a href="https://codeoxidemart.vq.pe">Shopping Center</a></li>
+						<li><a href="mdcat.html">MDCAT Course</a></li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>

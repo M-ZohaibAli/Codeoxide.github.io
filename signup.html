@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Sign-up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .login {
+            color: #999;
+        }
+
+        .login a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">CodeOxide</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="form/contact-form.html">Contact Us </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Other services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="quiz.html">OUR QUIZES</a></li>
+                            <li><a class="dropdown-item" href="Https://codeoxidemart.vq.pe">SHOPPING CENTER</a></li>
+                            <!--<li><hr class="dropdown-divider"></li>-->
+                            <li><a class="dropdown-item" href="education.html">EDUCATION CENTER</a></li>
+                            <li><a class="dropdown-item" href="mdcat.html">MDCAT ACADEMY</a></li>
+
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item">
+      <a class="nav-link disabled">Disabled</a>
+      </li>-->
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>Student Sign-up</h2>
+        <form action="signup.php" method="post">
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="password" name="password" placeholder="Password" required><br>
+            <input type="text" name="student_id" placeholder="Student ID" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+
+            <button type="submit">Sign up</button>
+        </form>
+        <p class="login">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="AboutUs.html">About Us</a></li>
+                        <li><a href="contact-form.html">Contact Us</a></li>
+                        <li><a href="PrivacyPolicy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12 center-row">
+                    <h4>Education</h4>
+                    <ul>
+                        <li><a href="education/class9.html">Class 9</a></li>
+                        <li><a href="education/Class10.html">Class 10</a></li>
+                        <li><a href="education/Cass11.html">Class 11</a></li>
+                        <li><a href="education/Class12.html">Class 12</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-12 right-corner">
+                    <ul>
+                        <li><a href="education/buybooks.html">Buy Our Books</a></li>
+                        <li><a href="https://codeoxidemart.vq.pe">Shopping Center</a></li>
+                        <li><a href="mdcat.html">MDCAT Course</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
